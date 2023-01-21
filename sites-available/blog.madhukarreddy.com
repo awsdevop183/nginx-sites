@@ -19,3 +19,4 @@ server {
                 proxy_pass http://localhost:90;
                 include proxy_params;
         }
+}
