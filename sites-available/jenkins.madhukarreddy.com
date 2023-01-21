@@ -1,0 +1,22 @@
+server {
+        listen 80;
+        server_name jenkins.madhukarreddy.com;
+
+	location / {
+                proxy_pass http://localhost:8080;
+		include proxy_params;
+        }
+	
+}
+
+server {
+        listen 443 ssl;
+        server_name jenkins.madhukarreddy.com;
+        ssl_certificate /etc/nginx/ssl/jenkins.madhukarreddy.com/certificate.crt;
+        ssl_certificate_key /etc/nginx/ssl/jenkins.madhukarreddy.com/private.key;
+
+        location / {
+                proxy_pass http://localhost:8080;
+		include proxy_params;
+        }
+}
