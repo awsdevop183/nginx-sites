@@ -3,7 +3,7 @@ server {
         server_name blog.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
-                proxy_pass http://localhost:80;
+                proxy_pass http://localhost:90;
                 include proxy_params;
         }
 
@@ -16,7 +16,6 @@ server {
 	ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com-0001/privkey.pem;
 
         location / {
-                root /var/www/html;
-		index index.html index.htm;
+                proxy_pass http://localhost:90;
+                include proxy_params;
         }
-}
