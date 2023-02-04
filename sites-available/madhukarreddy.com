@@ -9,7 +9,7 @@ server {
         server_name madhukarreddy.com;
 
         ssl_certificate /etc/letsencrypt/live/madhukarreddy.com/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
+		ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
         location / {
                 root /var/www/html;
