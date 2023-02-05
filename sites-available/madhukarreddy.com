@@ -2,6 +2,10 @@ server {
         listen 80;
         server_name madhukarreddy.com;
         return 301 https://$server_name$request_uri;
+        location / {
+                proxy_pass http://localhost;
+                include proxy_params;
+        }
 }
 
 server {
