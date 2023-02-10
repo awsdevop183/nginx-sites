@@ -19,5 +19,6 @@ server {
         location / {
                 proxy_pass http://10.1.3.179;
                 include proxy_params;
+                rewrite ^/$ / break;
         }
 }
