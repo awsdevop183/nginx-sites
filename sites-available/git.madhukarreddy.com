@@ -8,7 +8,7 @@ server {
         server_name git.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
-                proxy_pass http://localhost;
+                proxy_pass http://madhu_git;
                 include proxy_params;
         }
 }
