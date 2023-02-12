@@ -19,6 +19,5 @@ server {
         location / {
                 proxy_pass http://localhost:8082;
                 include proxy_params;
-                rewrite ^/$ / break;
         }
 }
