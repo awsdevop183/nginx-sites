@@ -4,7 +4,7 @@ server {
         server_name git.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
-                proxy_pass http://10.1.3.179:80;
+                proxy_pass http://localhost:8083;
                 include proxy_params;
         }
 }
@@ -17,7 +17,7 @@ server {
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com-0001/privkey.pem;
 
         location / {
-                proxy_pass http://10.1.3.179;
+                proxy_pass http://localhost:8083;
                 include proxy_params;
                 rewrite ^/$ / break;
         }
