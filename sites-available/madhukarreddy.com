@@ -1,6 +1,6 @@
 server {
         listen 80 default_server;
-        server_name madhukarreddy.com www.madhukarreddy.com;
+        server_name www.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
                 proxy_pass http://localhost;
