@@ -1,7 +1,6 @@
 server {
         listen 80;
-        server_name test.madhukarreddy.com;
-		return 301 https://$server_name$request_uri;
+        server_name cpu.madhukarreddy.com;
 
 	location / {
                 proxy_pass http://localhost:5000;
@@ -12,7 +11,7 @@ server {
 
 server {
         listen 443 ssl;
-        server_name test.madhukarreddy.com;
+        server_name cpu.madhukarreddy.com;
         ssl_certificate /etc/letsencrypt/live/madhukarreddy.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
