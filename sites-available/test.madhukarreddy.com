@@ -12,7 +12,7 @@ server {
 
 server {
         listen 443 ssl;
-        server_name jenkins.madhukarreddy.com;
+        server_name test.madhukarreddy.com;
         ssl_certificate /etc/letsencrypt/live/madhukarreddy.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
