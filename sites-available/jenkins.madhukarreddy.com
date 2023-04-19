@@ -4,7 +4,7 @@ server {
 		return 301 https://$server_name$request_uri;
 
 	location / {
-                proxy_pass http://localhost:5000;
+                proxy_pass http://127.0.0.1:5000;
 		include proxy_params;
         }
 	
@@ -17,7 +17,7 @@ server {
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
         location / {
-                proxy_pass http://localhost:5000;
+                proxy_pass http://127.0.0.1:5000;
 		include proxy_params;
         }
 }
