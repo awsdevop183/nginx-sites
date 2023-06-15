@@ -1,6 +1,6 @@
 
 server {
-        listen 80 default_server;
+        listen 80;
         server_name madhukarreddy.com www.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
@@ -13,8 +13,8 @@ server {
         listen 443 ssl;
         server_name madhukarreddy.com www.madhukarreddy.com;
 
-        ssl_certificate /etc/letsencrypt/live/madhukarreddy.com/fullchain.pem;
-		ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/madhukarreddy.com-0001/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com-0001/privkey.pem;
 
         location / {
                 root /var/www/html;
