@@ -1,7 +1,7 @@
 server {
         listen 80;
         server_name 18.211.36.253;
-        return 301 http://madhukarreddy.com$;
+        return 301 https://madhukarreddy.com$request_uri;
         location / {
                 proxy_pass http://localhost;
                 include proxy_params;
@@ -11,7 +11,7 @@ server {
 server {
         listen 443 ssl;
         server_name 18.211.36.253;
-	return 301 https://madhukarreddy.com;
+	return 301 https://madhukarreddy.com$request_uri;
 
         ssl_certificate /etc/letsencrypt/live/madhukarreddy.com-0001/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com-0001/privkey.pem;
