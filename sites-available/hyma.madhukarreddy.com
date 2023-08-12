@@ -3,7 +3,7 @@ server {
         server_name hyma.madhukarreddy.com;
         return 301 https://$server_name$request_uri;
         location / {
-                proxy_pass http://localhost:84;
+                proxy_pass http://localhost:5001;
                 include proxy_params;
         }
 
@@ -16,7 +16,7 @@ server {
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com-0001/privkey.pem;
 
         location / {
-                proxy_pass http://localhost:84;
+                proxy_pass http://localhost:5001;
                 include proxy_params;
         }
 }
