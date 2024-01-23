@@ -16,7 +16,7 @@ server {
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
         location / {
-                proxy_pass http://localhost:8092;
+                proxy_pass http://localhost:8091;
                 include proxy_params;
         }
 }
