@@ -3,7 +3,7 @@ server {
         server_name dev.madhukarreddy.com;
 
 	location / {
-                proxy_pass http://localhost:82;
+                proxy_pass http://192.168.49.2:30324;
 		include proxy_params;
         }
 	
@@ -16,7 +16,7 @@ server {
         ssl_certificate_key /etc/letsencrypt/live/madhukarreddy.com/privkey.pem;
 
         location / {
-                proxy_pass http://localhost:82;
+                proxy_pass http://192.168.49.2:30324;
 		include proxy_params;
         }
 }
